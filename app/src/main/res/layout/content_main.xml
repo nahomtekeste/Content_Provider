@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="com.example.content_providers.MainActivity"
+                tools:showIn="@layout/app_bar_main" android:onClick="addRecord">
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/title"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+
+    <EditText
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:hint="@string/name"/>
+
+    <EditText
+            android:id="@+id/nickname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name"
+            android:layout_below="@+id/name"
+            android:ems="10"
+            android:hint="@string/nickname"/>
+
+    <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/nickname"
+            android:layout_below="@+id/nickname"
+            android:layout_marginTop="30dp"
+            android:text="@string/add" android:layout_alignStart="@+id/nickname"/>
+
+    <Button
+            android:id="@+id/btnShow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnAdd"
+            android:layout_below="@+id/btnAdd"
+            android:layout_marginTop="20dp"
+            android:text="@string/show" android:onClick="showAllRecords"/>
+
+
+    <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnShow"
+            android:layout_below="@+id/btnShow"
+            android:layout_marginTop="20dp"
+            android:text="@string/delete" android:onClick="deleteAllRecords"/>
+
+
+</RelativeLayout>
